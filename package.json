@@ -1,0 +1,71 @@
+{
+  "name": "tshell",
+  "version": "1.0.0",
+  "description": "tshell",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack build --config build/webpack.prod.js",
+    "serve": "cross-env NODE_ENV=development webpack serve --config build/webpack.dev.js",
+    "electron": "cross-env NODE_ENV=development electron src/main.js",
+    "lint": "eslint --fix --ext .js,.ts,.jsx,.tsx src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyshek/tshell.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyshek/tshell/issues"
+  },
+  "homepage": "https://github.com/andyshek/tshell#readme",
+  "dependencies": {
+    "@babel/plugin-transform-object-assign": "^7.14.5",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.3.0",
+    "electron": "^15.0.0",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@babel/runtime-corejs2": "^7.15.4",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "babel-loader": "^8.2.2",
+    "bourbon": "^7.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "prettier": "^2.4.0",
+    "prettier-eslint": "^13.0.0",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.3.0",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.0"
+  }
+}

@@ -1,0 +1,30 @@
+@import 'bourbon';
+@import '../vars.scss';
+
+.#{$prefix} {
+    &-app-title {
+        -webkit-app-region: drag;
+        background-color: $primary-color;
+        height: $app-title-height;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        &-buttons {
+            -webkit-app-region: no-drag;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            .#{$prefix}-button {
+                height: 100%;
+                background-color: transparent;
+            }
+        }
+
+        .#{$prefix}-text {
+            color: $text-color;
+            height: 100%;
+            line-height: $app-title-height;
+        }
+    }
+}

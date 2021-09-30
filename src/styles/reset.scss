@@ -1,0 +1,18 @@
+@import 'bourbon';
+@import 'vars';
+
+html body {
+    margin: 0;
+}
+
+#{$all-buttons} {
+    outline: none;
+    border: 0;
+    background-color: $primary-color;
+    &:active {
+        filter: opacity(0.5);
+    }
+    &:hover {
+        filter: opacity(0.7);
+    }
+}

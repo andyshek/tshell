@@ -1,0 +1,12 @@
+@import 'bourbon';
+@import '../../vars.scss';
+
+$size: 14px;
+
+.#{$prefix} {
+    &-icon {
+        display: inline-block;
+        background-size: $size $size;
+        @include size($size);
+    }
+}
