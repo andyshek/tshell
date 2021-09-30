@@ -1,9 +1,9 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
+import { app, BrowserWindow, ipcMain } from 'electron'
 // import path from 'path'
 
-const isProd = process.env.NODE_ENV === 'production'
+const isProd: boolean = process.env.NODE_ENV === 'production'
 
-let mainWindow
+let mainWindow: BrowserWindow
 
 function createWindow() {
     // Create the browser window.
@@ -13,15 +13,13 @@ function createWindow() {
         frame: false,
         webPreferences: {
             nodeIntegration: true,
-            contextIsolation:false,
+            contextIsolation: false,
             javascript: true
             //   preload: path.join(__dirname, 'render.bundle.js')
         }
     })
-    if(isProd)
-        mainWindow.loadURL(`file://${__dirname}/index.html`)
-    else
-        mainWindow.loadURL(`http://localhost:8080`)
+    if (isProd) mainWindow.loadURL(`file://${__dirname}/index.html`)
+    else mainWindow.loadURL(`http://localhost:8080`)
     if (!isProd) mainWindow.webContents.openDevTools({ mode: 'detach' })
     return mainWindow
 }

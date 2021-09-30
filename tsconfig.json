@@ -2,21 +2,21 @@
     "compilerOptions": {
         "jsx": "react",
         "target": "es5",
-        "module": "esnext",
+        "module": "commonjs",
         "lib": [
             "es5",
             "dom"
         ],
         "allowJs": true,
         "strict": true,
-        "outDir": "build",
+        "outDir": "dist",
         "rootDir": "src",
         "noImplicitAny": true,
         "sourceMap": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "esModuleInterop": true,
-        "moduleResolution": "node",
+        "moduleResolution": "node"
     },
     "exclude": [
         "node_modules",
@@ -25,5 +25,5 @@
     "include": [
         "src",
         "typings.d.ts"
-    ]
+    ],
 }
