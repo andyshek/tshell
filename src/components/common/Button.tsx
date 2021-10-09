@@ -23,7 +23,7 @@ const Button = (p: Props) => {
             {p.icon === undefined ? null : (
                 <Icon
                     {...{
-                        name: p.icon
+                        src: p.icon
                     }}
                 ></Icon>
             )}

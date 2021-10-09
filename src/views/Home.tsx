@@ -1,10 +1,8 @@
-import React from "react"
-import AppTitle from "../components/AppTitle"
+import React from 'react'
 
 const Home = () => {
     return (
         <div>
-            <AppTitle></AppTitle>
         </div>
     )
 }

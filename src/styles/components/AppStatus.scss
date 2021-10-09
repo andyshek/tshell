@@ -1,0 +1,7 @@
+@import "../vars.scss";
+
+.#{$prefix}-app-status{
+    height: $app-status-height;
+    background-color: $primary-color;
+    color: $text-color;
+}

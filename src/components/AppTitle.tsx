@@ -6,26 +6,30 @@ import iconMaximize from '../assets/icons/maximize.svg'
 import iconMinimize from '../assets/icons/minimize.svg'
 import { getClassName } from '../utils'
 import { ipcRenderer } from 'electron'
+import Logo from './Logo'
+import { Observer, useLocalObservable } from 'mobx-react-lite'
+import appStore from '../store/app'
 
 function onMinimizeClick() {
-    console.log('minimize')
     ipcRenderer.send('minimize')
 }
 
 function onMaximizeClick() {
-    console.log('maximize')
     ipcRenderer.send('maximize')
 }
 
 function onClose() {
-    console.log('close')
     ipcRenderer.send('close')
 }
 
 const AppTitle = () => {
+    const app = useLocalObservable(appStore)
     return (
         <div className={getClassName('app-title')}>
-            <Text>Tshell</Text>
+            <Logo></Logo>
+            <Observer>
+                { () => (<Text>{ app.title }</Text>) }
+            </Observer>
             <div className={getClassName('app-title-buttons')}>
                 <Button icon={iconMinimize} onClick={onMinimizeClick}></Button>
                 <Button icon={iconMaximize} onClick={onMaximizeClick}></Button>

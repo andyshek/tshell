@@ -1,7 +1,8 @@
 import React from 'react'
 import { getClassName } from '../../utils'
+
 export interface Props {
-    name: string
+    src: string
     width?: number
     height?: number
 }
@@ -11,7 +12,7 @@ const Icon = (p: Props) => {
         <i
             className={getClassName('icon')}
             style={{
-                backgroundImage: `url(${p.name})`
+                backgroundImage: `url(${p.src})`
             }}
         ></i>
     )

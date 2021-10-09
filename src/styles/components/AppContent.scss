@@ -1,0 +1,6 @@
+@import "../vars.scss";
+
+.#{$prefix}-app-content{
+    height: calc(100vh - $app-title-height - $app-status-height);
+    background-color: opacify($primary-color, 0.12);
+}
