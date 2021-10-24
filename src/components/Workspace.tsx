@@ -1,10 +1,8 @@
-import React from "react"
-import { getClassName } from "../utils"
+import React from 'react'
+import { getClassName } from '../utils'
 
 const Workspace = () => {
-    return (
-        <div className={getClassName('workspace')}></div>
-    )
+    return <div className={getClassName('workspace')} />
 }
 
 export default Workspace

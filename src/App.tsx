@@ -8,9 +8,9 @@ import { getClassName } from './utils'
 
 const App = () => (
     <div className={getClassName('app')}>
-        <AppTitle></AppTitle>
-        <AppContent></AppContent>
-        <AppStatus></AppStatus>
+        <AppTitle />
+        <AppContent />
+        <AppStatus />
     </div>
 )
 

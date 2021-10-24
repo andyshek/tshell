@@ -1,13 +1,13 @@
 import React from 'react'
+import { ipcRenderer } from 'electron'
+import { Observer, useLocalObservable } from 'mobx-react-lite'
 import Button from './common/Button'
 import Text from './common/Text'
 import iconClose from '../assets/icons/close.svg'
 import iconMaximize from '../assets/icons/maximize.svg'
 import iconMinimize from '../assets/icons/minimize.svg'
 import { getClassName } from '../utils'
-import { ipcRenderer } from 'electron'
 import Logo from './Logo'
-import { Observer, useLocalObservable } from 'mobx-react-lite'
 import appStore from '../store/app'
 
 function onMinimizeClick() {
@@ -26,14 +26,12 @@ const AppTitle = () => {
     const app = useLocalObservable(appStore)
     return (
         <div className={getClassName('app-title')}>
-            <Logo></Logo>
-            <Observer>
-                { () => (<Text>{ app.title }</Text>) }
-            </Observer>
+            <Logo />
+            <Observer>{() => <Text>{app.title}</Text>}</Observer>
             <div className={getClassName('app-title-buttons')}>
-                <Button icon={iconMinimize} onClick={onMinimizeClick}></Button>
-                <Button icon={iconMaximize} onClick={onMaximizeClick}></Button>
-                <Button icon={iconClose} onClick={onClose}></Button>
+                <Button icon={iconMinimize} onClick={onMinimizeClick} />
+                <Button icon={iconMaximize} onClick={onMaximizeClick} />
+                <Button icon={iconClose} onClick={onClose} />
             </div>
         </div>
     )

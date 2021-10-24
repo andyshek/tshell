@@ -14,7 +14,7 @@ const Icon = (p: Props) => {
             style={{
                 backgroundImage: `url(${p.src})`
             }}
-        ></i>
+        />
     )
 }
 

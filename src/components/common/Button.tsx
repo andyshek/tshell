@@ -8,15 +8,15 @@ export interface Props {
     icon?: string
     width?: number
     height?: number
-    onClick?: Function
+    onClick?: () => void
 }
 
 const Button = (p: Props) => {
     return (
         <button
+            type="button"
             className={getClassName('button')}
             onClick={() => {
-                console.log('click')
                 if (p.onClick) p.onClick()
             }}
         >
@@ -25,7 +25,7 @@ const Button = (p: Props) => {
                     {...{
                         src: p.icon
                     }}
-                ></Icon>
+                />
             )}
             {p.children === undefined ? null : <Text>{p.children}</Text>}
         </button>
