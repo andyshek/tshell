@@ -1,8 +1,10 @@
 $prefix: 'tshell';
 
 // colors
-$primary-color: rgba(#000000,0.76);
-$text-color: rgba(#ffffff,0.76);
+$primary-color: #0190fe;
+$second-color: dark($primary-color, 20);
+$accent-color: #1d90e6;
+$text-color: #ffffff;
 
 // app titile height
 $app-title-height: 32px;
